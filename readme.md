@@ -8,10 +8,10 @@ babel 的原理
 3. generate 把AST变成new_code
 
 
-demo1 手动将let转成var
-demo2 自动将字符串代码转成es5
-demo3 将代码转成es5
-demo4 静态分析project_1依赖
-demo5 静态分析project_2依赖
-demo6 静态分析project_3循环依赖 递归报错
-demo7 静态分析project_3解决循环依赖递归报错
+demo1 手动将let转成var   
+demo2 自动将字符串代码转成es5   
+demo3 将代码转成es5   
+demo4 静态分析project_1依赖   
+demo5 静态分析project_2依赖   
+demo6 静态分析project_3循环依赖 递归报错   
+demo7 静态分析project_3解决循环依赖递归报错   
