@@ -97,5 +97,10 @@ function getProjectPath(path: string) {
   return relative(projectRoot, path).replace(/\\/g, '/')
 }
 
-// 分析project_1 index.js 依赖 并且编译为es5语法
-// 将depRelation对象转为数组 
+// 一个简易的打包器 打包 webpack-demo-2/project_1/index.js 生成 dist_2.js
+// 问题
+// 1. 生成_interopRequireDefault 函数重复
+// 2. 只能引入和运行 js
+// 3. 只能理解import 不支持require
+// 4. 不支持插件
+// 5. 不支持配置入口文件和dist文件名
