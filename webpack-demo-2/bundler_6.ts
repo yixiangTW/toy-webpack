@@ -64,7 +64,8 @@ function collectCodeAndDeps(filepath: string) {
   }
   let code = readFileSync(filepath).toString()
   if(/\.css$/.test(filepath)) {
-    code = require('../loaders/mycss-loader')(code)
+    code = require('../loaders/css-loader')(code)
+    code = require('../loaders/style-loader')(code)
   }
   // 将es6转为es5
   const result = babel.transform(code, {
@@ -101,4 +102,4 @@ function getProjectPath(path: string) {
 }
 
 // 一个简易的打包器 打包 webpack-demo-2/project_1/index.js 生成 bundle.js
-// 引入css-loader
+// 引入css-loader style-loader

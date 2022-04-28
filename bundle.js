@@ -69,20 +69,11 @@ exports["default"] = _default;
       code: function(require, module, exports) {
         "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var str = "body {\n  color: red;\n}";
-
 if (document) {
   var style = document.createElement('style');
-  style.innerHTML = str;
+  style.innerHTML = "body {\n  color: red;\n}";
   document.head.appendChild(style);
 }
-
-var _default = str;
-exports["default"] = _default;
       }
     }];
 var modules = {};
