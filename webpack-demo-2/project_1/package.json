@@ -2,5 +2,8 @@
   "name": "webpack-demo-2",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "node -r ts-node/register my_bundler.ts"
+  }
 }
