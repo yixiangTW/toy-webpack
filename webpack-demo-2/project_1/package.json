@@ -5,6 +5,9 @@
   "license": "MIT",
   "scripts": {
     "build": "node -r ts-node/register my_bundler.ts",
-    "start": "http-server ../project_1/"
+    "start": "http-server ."
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
