@@ -67,6 +67,9 @@ function collectCodeAndDeps(filepath: string) {
     code = require('../loaders/css-loader')(code)
     code = require('../loaders/style-loader')(code)
   }
+  if(/\.md$/.test(filepath)) {
+    code = require('../loaders/md-loader')(code)
+  }
   // 将es6转为es5
   const result = babel.transform(code, {
     presets: ['@babel/preset-env']

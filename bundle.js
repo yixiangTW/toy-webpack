@@ -1,6 +1,6 @@
 var depRelation = [{
       key: "index.js",
-      deps: ["a.js","b.js","style.css"],
+      deps: ["a.js","b.js","util/math.js","a.md","style.css"],
       code: function(require, module, exports) {
         "use strict";
 
@@ -8,12 +8,18 @@ var _a = _interopRequireDefault(require("./a.js"));
 
 var _b = _interopRequireDefault(require("./b.js"));
 
+var _math = _interopRequireDefault(require("./util/math.js"));
+
+var _a2 = _interopRequireDefault(require("a.md"));
+
 require("./style.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 console.log(_a["default"].getB());
 console.log(_b["default"].getA());
+console.log(_math["default"].getRandom());
+console.log(_a2["default"]);
       }
     },{
       key: "a.js",
@@ -61,6 +67,36 @@ var b = {
   }
 };
 var _default = b;
+exports["default"] = _default;
+      }
+    },{
+      key: "util/math.js",
+      deps: [],
+      code: function(require, module, exports) {
+        "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _default = {
+  getRandom: function getRandom() {
+    return Math.random();
+  }
+};
+exports["default"] = _default;
+      }
+    },{
+      key: "a.md",
+      deps: [],
+      code: function(require, module, exports) {
+        "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _default = "```\nconsole.log()\n```\n\n##### 11111";
 exports["default"] = _default;
       }
     },{
